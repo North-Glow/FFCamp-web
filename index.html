@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link name="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
     <header>
@@ -13,14 +13,14 @@
     </header>  
     <main>      
       <form id="survey-form">
-        <fieldset>
+        <fieldset id="f1">
           <legend>Please enter your information</legend>
           <label for="name" id="name-label">Please input your name</label><br>
             <input id="name" type="text"required placeholder="My name is..."/><br>
           <label for="email" id="email-label">Now enter your email</label><br>    
             <input id="email" type="email" required placeholder="sample@mail.com"/><br>
           <label for="number" id="number-label">And finally enter your phone number</label><br>        
-            <input id="number" type="number" pattern="[0-9]" min="0000000000" max="9999999999" placeholder="9991113337"/>
+            <input id="number" type="number" pattern="[0-9]{10}" placeholder="0000000000" required/>
         </fieldset>
         <fieldset>
          <legend for="dropdown">How do you identify yourself?</legend>             
@@ -53,7 +53,7 @@
           <legend id="last">Almost ready...</legend>
           <input id="terms" name="terms" type="checkbox" value="check"required/>
           <label for="terms">I have read & accept <a href="https://www.freecodecamp.org/news/terms-of-service/">the terms and conditions</a></label><br><br>
-          <input id="submit" type="submit" value="submit"/>
+          <input id="submit" type="submit" value="submit" onclick="alert('Validating data...')"/>
       </fieldset><br id="b">
       </form>     
     </main>
